@@ -264,6 +264,7 @@ public class SilkMothEntity extends AnimalEntity implements IFlyingAnimal {
 					    if (fullness < 3 && SilkMothEntity.this.rand.nextBoolean()) 
 					    {
 					    	fullness++;
+							state = state.with(BlockProperties.FULLNESS, fullness);
 						    BlockHelper.setWithUpdate(SilkMothEntity.this.hiveWorld, SilkMothEntity.this.hivePos, state);
 					    }
 					    SilkMothEntity.this.world.playSound(null, SilkMothEntity.this.entrance,
